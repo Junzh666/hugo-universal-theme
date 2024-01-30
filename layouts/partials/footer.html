@@ -1,6 +1,12 @@
 <footer id="footer">
     <div class="container">
 
+
+        <div class="col-md-4 col-sm-6">
+            {{ partial "map.html" . }}
+        </div>
+
+        
         {{ if isset .Site.Params "about_us" }}
         <div class="col-md-4 col-sm-6">
             <h4>{{ i18n "aboutUs" }}</h4>
@@ -10,10 +16,8 @@
             <hr class="hidden-md hidden-lg hidden-sm">
 
         </div>
-        <!-- /.col-md-4 -->
         {{ end }}
-
-        <div class="col-md-4 col-sm-6">
+        <!-- <div class="col-md-5 col-sm-6">
 
             {{ if isset .Site.Params "recent_posts" }}{{ if (default true .Site.Params.footer.recent_posts.enable) }}
             <h4>{{ i18n "recentPosts" }}</h4>
@@ -40,8 +44,9 @@
             <hr class="hidden-md hidden-lg">
             {{ end }}{{ end }}
 
-        </div>
+        </div> -->
         <!-- /.col-md-4 -->
+
 
         {{ if isset .Site.Params "address" }}
         <div class="col-md-4 col-sm-6">
@@ -57,6 +62,8 @@
         </div>
         <!-- /.col-md-4 -->
         {{ end }}
+
+
 
     </div>
     <!-- /.container -->
